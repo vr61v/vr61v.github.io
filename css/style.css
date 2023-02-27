@@ -1,1 +1,81 @@
 @import url("./reset.css");
+body {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 16px;
+}
+
+.wrapper {
+  /* Footer down */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.__container {
+  max-width: 1316px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  height: 100px;
+  background-color: #F2F2F2;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__link {
+  margin-right: 10px;
+}
+.nav.__last-child {
+  margin-right: 0 !important;
+}
+.nav__logo {
+  width: 200px;
+  height: 90px;
+  margin: 5px 0;
+}
+.nav__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main {
+  flex-grow: 1;
+}
+
+.main-block {
+  min-height: 100vh;
+  background-image: url("/images/bgMain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  color: #F2F2F2;
+}
+.main-block__body {
+  text-align: center;
+  padding-top: 368px;
+}
+.main-block__title {
+  font-weight: 700;
+  font-size: 124px;
+  line-height: 143px;
+}
+.main-block__text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+}
+
+.footer {
+  height: 100px;
+}
