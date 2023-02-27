@@ -38,9 +38,12 @@ body {
 .nav.__last-child {
   margin-right: 0 !important;
 }
+.nav__burger--btn {
+  display: none;
+}
 .nav__logo {
-  width: 200px;
-  height: 90px;
+  max-width: 200px;
+  max-height: 90px;
   margin: 5px 0;
 }
 .nav__logo img {
@@ -48,6 +51,39 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.nav__phone {
+  width: 226px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 75px;
+    font-size: 14px;
+  }
+  .nav__list {
+    display: none;
+  }
+  .nav__burger--btn {
+    display: block;
+    width: 100px;
+    height: 70px;
+  }
+  .nav__logo {
+    max-width: 150px;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 640px) {
+  .nav__list {
+    display: none;
+  }
+  .nav__logo {
+    width: 150px;
+    height: 67px;
+    margin: 5px 0;
+  }
 }
 .main {
   flex-grow: 1;
@@ -74,6 +110,69 @@ body {
   font-weight: 400;
   font-size: 36px;
   line-height: 41px;
+}
+
+@media (max-width: 640px) {
+  .main-block__body {
+    padding-top: 352px;
+  }
+  .main-block__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+  }
+  .main-block__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.about-block {
+  background-color: #0D0D0D;
+  color: #F2F2F2;
+}
+.about-block__description {
+  padding-top: 100px;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-auto-flow: column;
+}
+
+.description__text {
+  max-width: 633px;
+}
+.description__title {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 71px;
+}
+.description__paragraph {
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 43px;
+}
+.description__img1 {
+  max-width: 633px;
+  grid-row: span 2;
+}
+.description__img1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px 80px 80px 40px;
+}
+.description__img2 {
+  max-width: 633px;
+  padding-top: 50px;
+}
+.description__img2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 80px 40px 40px 80px;
 }
 
 .footer {
