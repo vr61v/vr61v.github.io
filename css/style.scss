@@ -13,7 +13,6 @@ body{
 }
 
 .wrapper{
-	/* Footer down */
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -31,6 +30,8 @@ body{
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+  position: absolute;
+  width: 100%;
 }
 .nav {
   display: flex;
@@ -53,7 +54,7 @@ body{
   &__logo img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   &__phone {
     width: 226px;
@@ -66,20 +67,25 @@ body{
 @media (max-width: 768px) {
   .header {
     height: 75px;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
   }
   .nav{
     &__list{
       display: none;
     }
     &__burger--btn{
-      display: block;
+      display: flex;
       width: 100px;
-      height: 70px;
+      height: 65px;
+      align-items: center;
     }
     &__logo {
-      max-width: 150px;
-      margin: 5px 0;
+      height: 65px;
+    }
+    &__phone{
+      width: 100px;
     }
   }
 }
@@ -87,11 +93,6 @@ body{
   .nav{
     &__list{
       display: none;
-    }
-    &__logo {
-      width: 150px;
-      height: 67px;
-      margin: 5px 0;
     }
   }
 }
@@ -127,9 +128,6 @@ body{
 
 }
 @media (max-width: 768px) {
-
-}
-@media (max-width: 640px) {
   .main-block {
     &__body {
       padding-top: 352px;
@@ -146,6 +144,9 @@ body{
     }
   }
 }
+@media (max-width: 640px) {
+
+}
 
 // __ABOUT__
 .about-block {
@@ -153,20 +154,24 @@ body{
   color: $white;
   &__description {
     padding-top: 100px;
+    
     display: grid;
     grid-column-gap: 10px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
+    align-items: stretch;
+    grid-auto-flow: row dense;
   }
 }
 .description {
-  &__text {
-    max-width: 633px;
-  }
   &__title {
     font-weight: 700;
     font-size: 62px;
     line-height: 71px; 
+    margin-bottom: 30px;
+  }
+  &__title__mobile{
+    display: none;
   }
   &__paragraph {
     font-weight: 400;
@@ -174,7 +179,6 @@ body{
     line-height: 43px;
   }
   &__img1 {
-    max-width: 633px;
     grid-row: span 2;
   }
   &__img1 img{
@@ -184,7 +188,6 @@ body{
     border-radius: 40px 80px 80px 40px;
   }
   &__img2 {
-    max-width: 633px;
     padding-top: 50px;
   }
   &__img2 img{
@@ -193,16 +196,73 @@ body{
     object-fit: cover;
     border-radius: 80px 40px 40px 80px;
   }
-  
 }
 @media (max-width: 1024px) {
-
+  .description {
+    &__title {
+      font-weight: 700;
+      font-size: 48px;
+    }
+    &__paragraph {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 27.6px;
+    }
+  }
 }
 @media (max-width: 768px) {
-
+  .about-block {
+    &__description {
+      padding-top: 50px;
+    }
+  }
+  .description {
+    &__title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 37px;
+    }
+  }
 }
 @media (max-width: 640px) {
-
+  .about-block {
+    &__description {
+      padding-top: 50px;
+    }
+  }
+  .description {
+    &__title{
+      display: none;
+    }
+    &__title__mobile{
+      display: block;
+      grid-column: span 2;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 37px;
+      margin-bottom: 25px;
+    }
+    &__paragraph {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__img1{
+      max-height: 280px;
+      grid-row: span 1;
+      
+    }
+    &__img1 img{
+      border-radius: 20px 40px 20px 20px;
+    }
+    &__img2 {
+      padding-top: 10px;
+      grid-column: span 2;
+    }
+    &__img2 img{
+      border-radius: 20px 20px 40px 40px;
+    }
+  }
 }
 
 
